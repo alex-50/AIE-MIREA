@@ -45,6 +45,9 @@ def head(
         encoding: str = typer.Option("utf-8", help="Кодировка файла."),
         n: int = typer.Option(5, help="Вывод первых n строк")
 ) -> None:
+    """
+    Вывод первых n-строк датасета
+    """
     df = _load_csv(Path(path), sep=sep, encoding=encoding)
     typer.echo(df.head(n))
 
