@@ -59,3 +59,53 @@ def test_correlation_and_top_categories():
     city_table = top_cats["city"]
     assert "value" in city_table.columns
     assert len(city_table) <= 2
+
+
+######################  Мои тест-функции к новым эвристикам ######################
+def test_quality_flags_constant_columns():
+    df = pd.DataFrame(
+        {
+            "constant_col": [1, 1, 1, 1],
+            "value": [10, 20, 30, 40],
+        }
+    )
+
+    summary = summarize_dataset(df)
+    missing_df = missing_table(df)
+    flags = compute_quality_flags(summary, missing_df)
+
+    assert flags["has_constant_columns"] is True
+    assert 0.0 <= flags["quality_score"] <= 1.0
+
+
+def test_quality_flags_high_cardinality_categoricals():
+    df = pd.DataFrame(
+        {
+            "category": [f"cat_{i}" for i in range(100)],
+            "value": list(range(100)),
+        }
+    )
+
+    summary = summarize_dataset(df)
+    missing_df = missing_table(df)
+    flags = compute_quality_flags(summary, missing_df)
+
+    assert flags["has_high_cardinality_categoricals"] is True
+    assert 0.0 <= flags["quality_score"] <= 1.0
+
+
+def test_quality_flags_suspicious_id_duplicates():
+    df = pd.DataFrame(
+        {
+            "id": [1, 2, 2, 3],
+            "value": [10, 20, 30, 40],
+        }
+    )
+
+    summary = summarize_dataset(df)
+    missing_df = missing_table(df)
+    flags = compute_quality_flags(summary, missing_df)
+
+    assert flags["has_suspicious_id_duplicates"] is True
+    assert 0.0 <= flags["quality_score"] <= 1.0
+#####################################################################
