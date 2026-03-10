@@ -55,3 +55,6 @@ logs/
 *.tmp
 *.bak
 *.old
+
+# Датасеты
+homeworks/HW08-09/data/
