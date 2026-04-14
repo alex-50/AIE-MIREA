@@ -14,8 +14,8 @@
 - Python: 3.11.9
 - faiss-cpu: 1.7.4
 - sentence-transformers: 2.2.2
-- torch: 2.0.1 (CPU)
-- Устройство: CPU
+- torch: 2.0.1
+- Устройство: cuda
 - Seed: 42 (random, numpy)
 - Как запустить: открыть `HW14.ipynb` и выполнить Run All
 
@@ -78,6 +78,7 @@
 
 **Ссылки на файлы в репозитории:**
 - Оценка retrieval: `./artifacts/retrieval_eval.csv`
+- Эксперимент с `top_k`: `./artifacts/top_k_comparison.csv`
 - Примеры ответов mini-RAG: `./artifacts/rag_examples.csv`
 - Сравнение до/после обновления: `./artifacts/retrieval_before_after_update.csv`
 
@@ -118,4 +119,5 @@
 
 ## 9. Приложение (опционально)
 
-Дополнительные эксперименты не проводились.
+Дополнительные артефакты:
+- `./artifacts/top_k_comparison.csv` — результаты сравнительного эксперимента (top_k=2 vs top_k=7)

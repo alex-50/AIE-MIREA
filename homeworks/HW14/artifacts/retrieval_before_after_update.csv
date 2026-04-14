@@ -1,4 +1,4 @@
-,query,before_sources,after_sources,changed
+,query,before_retrieved_sources,after_retrieved_sources,changed
 0,"Сколько шагов насчитал Раскольников от своей каморки до двери старухи-процентщицы и какой предмет он прикрепил к пальто, чтобы спрятать топор?","['classic_01', 'classic_09', 'classic_01', 'classic_05', 'classic_01', 'classic_08', 'classic_05']","['new_03', 'classic_01', 'classic_09', 'classic_01', 'classic_05', 'new_03', 'classic_01']",True
 1,"Какое именно ранение получил Андрей Болконский под Аустерлицем и какие слова Наполеона он услышал, лежа на земле и глядя в небо?","['classic_02', 'classic_02', 'classic_08', 'classic_10', 'classic_06', 'classic_02', 'classic_10']","['classic_02', 'classic_02', 'new_03', 'classic_08', 'classic_10', 'classic_06', 'classic_02']",True
 2,"Сколько тысяч червонцев выпало из кошелька у конферансье Жоржа Бенгальского после того, как Коровьев оторвал ему голову, и как звали кота, который пил водку и стрелял из маузера?","['classic_03', 'classic_08', 'classic_08', 'classic_05', 'classic_09', 'classic_03', 'classic_11']","['classic_03', 'new_04', 'classic_08', 'classic_08', 'classic_05', 'classic_09', 'new_03']",True
