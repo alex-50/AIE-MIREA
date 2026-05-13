@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project"
+version = "0.1.0"
+description = "Сервис для классификации новостных статей (BERT + TF-IDF/SVM baseline)"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Alexander Baranov", email = "alexander05baranov@yandex.ru" }
+]
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.30",
+    "datasets>=2.14",
+    "scikit-learn>=1.3",
+    "fastapi>=0.100",
+    "uvicorn>=0.23",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "pyyaml>=6.0",
+    "joblib>=1.3",
+    "tqdm>=4.65",
+    "pymorphy3>=1.0",
+    "wordcloud>=1.9",
+    "gdown>=5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "jupyter>=1.0",
+    "ipykernel>=6.25",
+    "ruff>=0.1",
+    "black>=23.7",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+]

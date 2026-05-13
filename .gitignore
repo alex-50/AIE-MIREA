@@ -59,6 +59,8 @@ logs/
 # Датасеты
 homeworks/HW08-09/data/
 homeworks/HW10-11/data/
+project/data/raw
+project/data/preprocessed
 
 #Веса
 homeworks/HW13/.output/
