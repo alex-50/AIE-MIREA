@@ -64,3 +64,5 @@ project/data/preprocessed
 
 #Веса
 homeworks/HW13/.output/
+project/artifacts/rubert_fine-tune/output
+project/artifacts/rubert_fine-tune/rubert_tiny2_finetune
